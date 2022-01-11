@@ -48,6 +48,6 @@ jobs:
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/static-website-boilerplate-master:buildcache,mode=max
       - 
         name: Run script file
-        run: |
-         ls
-        shell: bash
+        uses: mathiasvr/command-output@v1.1.0
+        with: 
+         run: ls
