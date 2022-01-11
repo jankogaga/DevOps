@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./Dockerfile
+          file: ./static-website-boilerplate-master/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/static-website-boilerplate-master:latest
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/static-website-boilerplate-master:buildcache
