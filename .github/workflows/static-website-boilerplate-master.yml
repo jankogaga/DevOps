@@ -47,7 +47,7 @@ jobs:
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/static-website-boilerplate-master:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/static-website-boilerplate-master:buildcache,mode=max
       - 
-        name: Run script file
-        uses: mathiasvr/command-output@v1.1.0
+        name: Run PowerShell command
+        uses: Amadevus/pwsh-script@v2.0.1
         with: 
-         run: ls
+         script: ls
