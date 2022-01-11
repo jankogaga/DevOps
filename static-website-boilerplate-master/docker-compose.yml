@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  staticwebsiteboilerplate:
+    #image: staticwebsiteboilerplate
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    #environment:
+    # NODE_ENV: production
+    ports:
+      - 8081:3000 #ext port:int port
