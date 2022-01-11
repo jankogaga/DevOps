@@ -48,5 +48,5 @@ jobs:
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/static-website-boilerplate-master:buildcache,mode=max
       - 
         name: Run ls command
-        run: ls
-        shell: bash
+        run: |
+          pwd;ls
