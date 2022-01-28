@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+
+  currency-exchange:
+    image: ${DOCKER_REGISTRY-}exchange
+    restart: always
+    container_name: currency-exchange
+    build:
+      context: ./01-currency-exchange-microservice-basic/
+    ports:
+      - "8000:8000"
+    
+  currency:
+    image: ${DOCKER_REGISTRY-}currency
+    restart: always
+    container_name: currency
+    build:
+      context: ./02-currency-conversion-microservice-basic/
+    ports:
+      - "8100:8100"
+    environment:
+      - "CURRENCY_EXCHANGE_SERVICE_HOST=http://currency-exchange"
+    #call app with http://localhost:8100/currency-conversion/from/EUR/to/INR/quantity/10
+
