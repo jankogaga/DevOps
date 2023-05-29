@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: pwd & ls -l & docker build . --file ../static-website-boilerplate-master/Dockerfile #--tag my-image-name:$(date +%s)
+      run: docker build . --file static-website-boilerplate-master/Dockerfile #--tag my-image-name:$(date +%s)
