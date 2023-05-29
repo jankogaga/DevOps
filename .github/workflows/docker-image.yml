@@ -15,4 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file static-website-boilerplate-master/Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file static-website-boilerplate-master/Dockerfile --tag test
+    
+    - name: Run Docker container
+      uses: docker://test
+#       with:
+#         args: your-command-to-run-in-container
+        
+    - name: Curl
+      run: curl http://localhost:3000
+      
