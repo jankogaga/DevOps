@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file static-website-boilerplate-master/Dockerfile --tags jankogaga/static-website-boilerplate-master:latest
+      run: docker build . --file static-website-boilerplate-master/Dockerfile --tag jankogaga/static-website-boilerplate-master:latest
     
     - name: Run Docker container
       uses: docker://jankogaga/static-website-boilerplate-master:latest
