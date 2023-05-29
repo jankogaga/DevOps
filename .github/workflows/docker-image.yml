@@ -15,10 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file static-website-boilerplate-master/Dockerfile -t test
+      run: docker build . --file static-website-boilerplate-master/Dockerfile -tags jankogaga/static-website-boilerplate-master:latest
     
     - name: Run Docker container
-      uses: docker://test
+      uses: docker://jankogaga/static-website-boilerplate-master:latest
 #       with:
 #         args: your-command-to-run-in-container
         
