@@ -17,11 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file static-website-boilerplate-master/Dockerfile --tag jankogaga/static-website-boilerplate-master:latest
     
-#     - name: Run Docker container
-#       uses: docker://jankogaga/static-website-boilerplate-master:latest
-#       with:
-#         args: your-command-to-run-in-container
-        
-#     - name: Curl
-#       run: curl http://localhost:3000
+    - name: Build the Docker image
+      run: docker run -d jankogaga/static-website-boilerplate-master:latest
       
