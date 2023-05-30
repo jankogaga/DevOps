@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file static-website-boilerplate-master/Dockerfile --tag jankogaga/static-website-boilerplate-master:latest
     
-    - name: Build the Docker image
+    - name: Run the Docker image
       run: docker run -d jankogaga/static-website-boilerplate-master:latest
       
