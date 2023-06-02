@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file static-website-boilerplate-master/Dockerfile --tag devops/static-website-boilerplate-master:latest
     
-    - name: Run the Docker image
-      run: docker run devops/static-website-boilerplate-master:latest
+    - name: Run the Docker container
+      run: docker run -d devops/static-website-boilerplate-master:latest
       
